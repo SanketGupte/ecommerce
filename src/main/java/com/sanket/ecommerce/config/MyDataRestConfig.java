@@ -1,7 +1,7 @@
 package com.sanket.ecommerce.config;
 
 import com.sanket.ecommerce.entities.ProductCategory;
-import com.sanket.ecommerce.entities.Products;
+import com.sanket.ecommerce.entities.Product;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -16,7 +16,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         //disable HTTP Methods for products: PUT, POST, DELETE
         config.getExposureConfiguration()
-                .forDomainType(Products.class)
+                .forDomainType(Product.class)
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(unSupportedActions))
                 .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(unSupportedActions));
 

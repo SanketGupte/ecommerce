@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -12,7 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name="product")
 @Data
-public class Products {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
